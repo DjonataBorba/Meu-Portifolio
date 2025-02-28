@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meu Portifólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicio</a>
+            </li>
+
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/djonata.png" alt="foto djonata borba" class="foto-perfil">
+            <h1>Djonata Borba</h1>
+            <p class="sub-titulo">Desenvolvedor Front-End</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="projetos">
+        <h2 class="sobre-titulo"> Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-p">
+                Olá! meu nome é Djonata Alexandre Borba, tenho 28 anos, sou natural de Florianópolis-sc,
+                sou Desenvolvedor Web apaixonado pela tecnologia, gosto de criar sites memoráveis e incríveis,
+                combinando codigos limpo com um design moderno e atrativo, que não só funcionam perfeitamente,
+                mas também sejam impressionantes visualmente, dedicado a dar meu melhor todos os Dias.
+
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="./img/Corporação Tesla - Pessoal — Microsoft​ Edge 22_02_2025 19_03_46.png" alt="projeto 1"
+                    class="projetos-img">
+
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Projeto Tesla</h3>
+                    <p class="paragrafo-projeto">Site moderno com animação suave e design responsivo.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/FP Selection e mais 2 páginas - Pessoal — Microsoft​ Edge 22_02_2025 19_01_18.png"
+                    alt="projeto 2" class="projetos-img">
+
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Loja de Carros</h3>
+                    <p class="paragrafo-projeto">Site moderno, facil navegação e agradável aos olhos.</p>
+
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/mara cantinho da beleza.png" alt="projeto 3" class="projetos-img">
+
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Salão de Beleza</h3>
+                    <p class="paragrafo-projeto">Salão de Beleza ótimo para sua autoestima,site responsivo e de facil
+                        interação.</p>
+                </div>
+
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/Revendedora O´Boticário e mais 2 páginas - Pessoal — Microsoft​ Edge 27_02_2025 01_01_20.png"
+                    alt="projeto 3" class="projetos-img">
+
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projeto">Revenda Oboticario</h3>
+                    <p class="paragrafo-projeto">missão é levar produtos de qualidade e com agilidade para nossos
+                        clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault('enviarWhats')
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5548996732704'
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+
+        }
+
+    </script>
+</body>
+
+</html>
